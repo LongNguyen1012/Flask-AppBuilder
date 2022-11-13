@@ -225,6 +225,7 @@ class SecurityManager(BaseSecurityManager):
                 user.password = hashed_password
             else:
                 user.password = generate_password_hash(password)
+            print('passssedddddddddddddddddddddddd..........................')
             self.get_session.add(user)
             self.get_session.commit()
             log.info(c.LOGMSG_INF_SEC_ADD_USER.format(username))
