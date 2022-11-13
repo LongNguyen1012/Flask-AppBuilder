@@ -228,9 +228,11 @@ class SecurityManager(BaseSecurityManager):
             print('passssedddddddddddddddddddddddd..........................', flush=True)
             try:
                 self.get_session.add(user)
+                print('self.get_session.add(user)', flush=True)
                 self.get_session.commit()
+                print('self.get_session.commit()', flush=True)
             except Exception as e:
-                print('passssedddddddddddddddddddddddd      ehhhhhhhhhhhhhh..........................', flush=True)
+                
                 raise Exception("Sorry, no numbers below zero")
             log.info(c.LOGMSG_INF_SEC_ADD_USER.format(username))
             return user
