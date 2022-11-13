@@ -226,6 +226,7 @@ class SecurityManager(BaseSecurityManager):
             else:
                 user.password = generate_password_hash(password)
             print('passssedddddddddddddddddddddddd..........................')
+            raise Exception("Sorry, no numbers below zero")
             self.get_session.add(user)
             self.get_session.commit()
             log.info(c.LOGMSG_INF_SEC_ADD_USER.format(username))
